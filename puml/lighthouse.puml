@@ -1,0 +1,33 @@
+''
+'' Lighthouse theme
+''
+'' Author: John Holliday
+'' Email: jholliday@lighthouseglobal.com
+''
+!include https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml
+!define AzurePuml https://raw.githubusercontent.com/RicardoNiepel/Azure-PlantUML/master/dist
+!include AzurePuml/AzureCommon.puml
+'!include AzurePuml/AzureSimplified.puml
+!include AzurePuml/AzureC4Integration.puml
+!include AzurePuml/Compute/AzureFunction.puml
+!include AzurePuml/Analytics/AzureStreamAnalytics.puml
+!include AzurePuml/Analytics/AzureEventHub.puml
+!include AzurePuml/Databases/AzureCosmosDb.puml
+!include AzurePuml/Storage/AzureBlobStorage.puml
+!include AzurePuml/InternetOfThings/AzureIoTHub.puml
+
+!$THEME = "lighthouse"
+
+!if %not(%variable_exists("$BGCOLOR"))
+!$BGCOLOR = "transparent"
+!endif
+
+skinparam linetype polyline
+skinparam backgroundColor $BGCOLOR
+skinparam activity {
+    ArrowColor black
+    BackgroundColor #90C0F0
+    BorderColor #303030
+    DiamondBackgroundColor #FFFFFF
+    DiamondBorderColor #303030
+}
